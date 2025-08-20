@@ -1594,6 +1594,11 @@ functions = {
                     'value': 'numberOfLocations'
                 },
                 'type': 'ViReal64[]'
+            },
+            {
+                'direction': 'out',
+                'name': 'requiredSize',
+                'type': 'ViInt32'
             }
         ],
         'returns': 'ViStatus'
@@ -1623,6 +1628,11 @@ functions = {
                     'value': 'numberOfLocations'
                 },
                 'type': 'ViReal64[]'
+            },
+            {
+                'direction': 'out',
+                'name': 'requiredSize',
+                'type': 'ViInt32'
             }
         ],
         'returns': 'ViStatus'
@@ -1652,6 +1662,11 @@ functions = {
                     'value': 'numberOfLocations'
                 },
                 'type': 'ViReal64[]'
+            },
+            {
+                'direction': 'out',
+                'name': 'requiredSize',
+                'type': 'ViInt32'
             }
         ],
         'returns': 'ViStatus'
