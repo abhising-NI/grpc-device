@@ -1590,16 +1590,10 @@ functions = {
                 'direction': 'out',
                 'name': 'locations',
                 'size': {
-                    'mechanism': 'ivi-dance-with-a-twist',
-                    'value': 'numberOfLocations',
-                    'value_twist': 'requiredSize'
+                    'mechanism': 'ivi-dance',
+                    'value': 'numberOfLocations'
                 },
                 'type': 'ViReal64[]'
-            },
-            {
-                'direction': 'out',
-                'name': 'requiredSize',
-                'type': 'ViInt32'
             }
         ],
         'returns': 'ViStatus'
@@ -1625,16 +1619,10 @@ functions = {
                 'direction': 'out',
                 'name': 'locations',
                 'size': {
-                    'mechanism': 'ivi-dance-with-a-twist',
-                    'value': 'numberOfLocations',
-                    'value_twist': 'requiredSize'
+                    'mechanism': 'ivi-dance',
+                    'value': 'numberOfLocations'
                 },
                 'type': 'ViReal64[]'
-            },
-            {
-                'direction': 'out',
-                'name': 'requiredSize',
-                'type': 'ViInt32'
             }
         ],
         'returns': 'ViStatus'
@@ -1660,16 +1648,10 @@ functions = {
                 'direction': 'out',
                 'name': 'locations',
                 'size': {
-                    'mechanism': 'ivi-dance-with-a-twist',
-                    'value': 'numberOfLocations',
-                    'value_twist': 'requiredSize'
+                    'mechanism': 'ivi-dance',
+                    'value': 'numberOfLocations'
                 },
                 'type': 'ViReal64[]'
-            },
-            {
-                'direction': 'out',
-                'name': 'requiredSize',
-                'type': 'ViInt32'
             }
         ],
         'returns': 'ViStatus'
