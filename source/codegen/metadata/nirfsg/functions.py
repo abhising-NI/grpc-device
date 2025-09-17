@@ -2516,13 +2516,12 @@ functions = {
             },
             {
                 'direction': 'in',
-                'grpc_type': 'repeated nidevice_grpc.NIComplexNumberF32',
                 'name': 'wfmData',
                 'size': {
                     'mechanism': 'len',
                     'value': 'numberOfSamples'
                 },
-                'type': 'NIComplexNumberF32_struct[]'
+                'type': 'ViReal32[]'
             },
             {
                 'direction': 'in',
@@ -2551,13 +2550,12 @@ functions = {
             },
             {
                 'direction': 'in',
-                'grpc_type': 'repeated nidevice_grpc.NIComplexNumber',
                 'name': 'wfmData',
                 'size': {
                     'mechanism': 'len',
                     'value': 'numberOfSamples'
                 },
-                'type': 'NIComplexNumber_struct[]'
+                'type': 'ViReal64[]'
             },
             {
                 'direction': 'in',
@@ -2586,13 +2584,13 @@ functions = {
             },
             {
                 'direction': 'in',
-                'grpc_type': 'repeated nidevice_grpc.NIComplexI16',
+                'grpc_type': 'repeated sint32',
                 'name': 'wfmData',
                 'size': {
                     'mechanism': 'len',
                     'value': 'numberOfSamples'
                 },
-                'type': 'NIComplexI16_struct[]'
+                'type': 'ViInt16[]'
             }
         ],
         'returns': 'ViStatus'
