@@ -2014,7 +2014,7 @@ message WriteArbWaveformResponse {
 message WriteArbWaveformComplexF32Request {
   nidevice_grpc.Session vi = 1;
   string waveform_name = 2;
-  repeated nidevice_grpc.NIComplexNumberF32 wfm_data = 3;
+  repeated float wfm_data = 3;
   bool more_data_pending = 4;
 }
 
@@ -2025,7 +2025,7 @@ message WriteArbWaveformComplexF32Response {
 message WriteArbWaveformComplexF64Request {
   nidevice_grpc.Session vi = 1;
   string waveform_name = 2;
-  repeated nidevice_grpc.NIComplexNumber wfm_data = 3;
+  repeated double wfm_data = 3;
   bool more_data_pending = 4;
 }
 
@@ -2036,7 +2036,7 @@ message WriteArbWaveformComplexF64Response {
 message WriteArbWaveformComplexI16Request {
   nidevice_grpc.Session vi = 1;
   string waveform_name = 2;
-  repeated nidevice_grpc.NIComplexI16 wfm_data = 3;
+  repeated sint32 wfm_data = 3;
 }
 
 message WriteArbWaveformComplexI16Response {

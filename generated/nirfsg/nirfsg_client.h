@@ -130,9 +130,9 @@ SetWaveformBurstStopLocationsResponse set_waveform_burst_stop_locations(const St
 SetWaveformMarkerEventLocationsResponse set_waveform_marker_event_locations(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& channel_name, const std::vector<double>& locations);
 WaitUntilSettledResponse wait_until_settled(const StubPtr& stub, const nidevice_grpc::Session& vi, const pb::int32& max_time_milliseconds);
 WriteArbWaveformResponse write_arb_waveform(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<double>& i_data, const std::vector<double>& q_data, const bool& more_data_pending);
-WriteArbWaveformComplexF32Response write_arb_waveform_complex_f32(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<nidevice_grpc::NIComplexNumberF32>& wfm_data, const bool& more_data_pending);
-WriteArbWaveformComplexF64Response write_arb_waveform_complex_f64(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<nidevice_grpc::NIComplexNumber>& wfm_data, const bool& more_data_pending);
-WriteArbWaveformComplexI16Response write_arb_waveform_complex_i16(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<nidevice_grpc::NIComplexI16>& wfm_data);
+WriteArbWaveformComplexF32Response write_arb_waveform_complex_f32(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<float>& wfm_data, const bool& more_data_pending);
+WriteArbWaveformComplexF64Response write_arb_waveform_complex_f64(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<double>& wfm_data, const bool& more_data_pending);
+WriteArbWaveformComplexI16Response write_arb_waveform_complex_i16(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<pb::int32>& wfm_data);
 WriteArbWaveformF32Response write_arb_waveform_f32(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<float>& i_data, const std::vector<float>& q_data, const bool& more_data_pending);
 WriteScriptResponse write_script(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& script);
 

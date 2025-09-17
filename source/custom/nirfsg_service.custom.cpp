@@ -47,7 +47,7 @@ namespace nirfsg_grpc {
       ViInt32 number_of_samples = static_cast<ViInt32>(request->wfm_data().size() / 2);
 
       ViBoolean more_data_pending = request->more_data_pending();
-      auto status = library_->WriteArbWaveformComplexF32(vi, waveform_name, number_of_samples, wfm_data_ptr, more_data_pending);
+      auto status = library_->WriteArbWaveformComplexF32(vi, waveform_name, number_of_samples, const_cast<NIComplexNumberF32_struct*>(wfm_data_ptr), more_data_pending);
       if (!status_ok(status)) {
         return ConvertApiErrorStatusForViSession(context, status, vi);
       }
@@ -80,7 +80,7 @@ namespace nirfsg_grpc {
       ViInt32 number_of_samples = static_cast<ViInt32>(request->wfm_data().size() / 2);
 
       ViBoolean more_data_pending = request->more_data_pending();
-      auto status = library_->WriteArbWaveformComplexF64(vi, waveform_name, number_of_samples, wfm_data_ptr, more_data_pending);
+      auto status = library_->WriteArbWaveformComplexF64(vi, waveform_name, number_of_samples, const_cast<NIComplexNumber_struct*>(wfm_data_ptr), more_data_pending);
       if (!status_ok(status)) {
         return ConvertApiErrorStatusForViSession(context, status, vi);
       }
@@ -106,13 +106,12 @@ namespace nirfsg_grpc {
       auto waveform_name = waveform_name_mbcs.c_str();
 
       // Get pointer to interleaved int16 array
-      const ViInt16* wfm_data = request->wfm_data().data();
-      // Reinterpret as array of NIComplexI16_struct
+      const ViInt16* wfm_data = reinterpret_cast<const ViInt16*>(request->wfm_data().data());
       const NIComplexI16_struct* wfm_data_ptr = reinterpret_cast<const NIComplexI16_struct*>(wfm_data);
       // Number of samples is half the int16 count
       ViInt32 number_of_samples = static_cast<ViInt32>(request->wfm_data().size() / 2);
 
-      auto status = library_->WriteArbWaveformComplexI16(vi, waveform_name, number_of_samples, wfm_data_ptr);
+      auto status = library_->WriteArbWaveformComplexI16(vi, waveform_name, number_of_samples, const_cast<NIComplexI16_struct*>(wfm_data_ptr));
       if (!status_ok(status)) {
         return ConvertApiErrorStatusForViSession(context, status, vi);
       }

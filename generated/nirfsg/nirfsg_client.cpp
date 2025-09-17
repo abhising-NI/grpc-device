@@ -2272,7 +2272,7 @@ write_arb_waveform(const StubPtr& stub, const nidevice_grpc::Session& vi, const 
 }
 
 WriteArbWaveformComplexF32Response
-write_arb_waveform_complex_f32(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<nidevice_grpc::NIComplexNumberF32>& wfm_data, const bool& more_data_pending)
+write_arb_waveform_complex_f32(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<float>& wfm_data, const bool& more_data_pending)
 {
   ::grpc::ClientContext context;
 
@@ -2292,7 +2292,7 @@ write_arb_waveform_complex_f32(const StubPtr& stub, const nidevice_grpc::Session
 }
 
 WriteArbWaveformComplexF64Response
-write_arb_waveform_complex_f64(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<nidevice_grpc::NIComplexNumber>& wfm_data, const bool& more_data_pending)
+write_arb_waveform_complex_f64(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<double>& wfm_data, const bool& more_data_pending)
 {
   ::grpc::ClientContext context;
 
@@ -2312,7 +2312,7 @@ write_arb_waveform_complex_f64(const StubPtr& stub, const nidevice_grpc::Session
 }
 
 WriteArbWaveformComplexI16Response
-write_arb_waveform_complex_i16(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<nidevice_grpc::NIComplexI16>& wfm_data)
+write_arb_waveform_complex_i16(const StubPtr& stub, const nidevice_grpc::Session& vi, const std::string& waveform_name, const std::vector<pb::int32>& wfm_data)
 {
   ::grpc::ClientContext context;
 

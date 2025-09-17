@@ -2498,6 +2498,7 @@ functions = {
         'returns': 'ViStatus'
     },
     'WriteArbWaveformComplexF32': {
+        'codegen_method': 'CustomCode',
         'parameters': [
             {
                 'direction': 'in',
@@ -2517,11 +2518,12 @@ functions = {
             {
                 'direction': 'in',
                 'name': 'wfmData',
+                'grpc_type': 'repeated float',
                 'size': {
                     'mechanism': 'len',
                     'value': 'numberOfSamples'
                 },
-                'type': 'ViReal32[]'
+                'type': 'NIComplexNumberF32_struct[]'
             },
             {
                 'direction': 'in',
@@ -2532,6 +2534,7 @@ functions = {
         'returns': 'ViStatus'
     },
     'WriteArbWaveformComplexF64': {
+        'codegen_method': 'CustomCode',
         'parameters': [
             {
                 'direction': 'in',
@@ -2551,11 +2554,12 @@ functions = {
             {
                 'direction': 'in',
                 'name': 'wfmData',
+                'grpc_type': 'repeated double',
                 'size': {
                     'mechanism': 'len',
                     'value': 'numberOfSamples'
                 },
-                'type': 'ViReal64[]'
+                'type': 'NIComplexNumber_struct[]'
             },
             {
                 'direction': 'in',
@@ -2566,6 +2570,7 @@ functions = {
         'returns': 'ViStatus'
     },
     'WriteArbWaveformComplexI16': {
+        'codegen_method': 'CustomCode',
         'parameters': [
             {
                 'direction': 'in',
@@ -2590,7 +2595,7 @@ functions = {
                     'mechanism': 'len',
                     'value': 'numberOfSamples'
                 },
-                'type': 'ViInt16[]'
+                'type': 'NIComplexI16_struct[]'
             }
         ],
         'returns': 'ViStatus'
